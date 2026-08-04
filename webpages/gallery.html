@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo Gallery of Sport Club Toronto">
+    <title>Sport Club Toronto | Gallery</title>
+    
+    <!-- Unique CSS base -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Slick Slider Plugin CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body class="page-gallery">
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="stats.html">Stats</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <header id="banner">
+        <h1>Club Media & Highlights</h1>
+    </header>
+
+    <main>
+        <div class="box">
+            <h2>Season Highlights</h2>
+            <p>Explore some of the best moments of our team on and off the field.</p>
+
+            <!-- jQuery Plugin Container -->
+            <div class="slider-container">
+                <div><img src="../images/diversity.jpg" alt="Match moment 1"><p class="caption">Match Highlights vs FC Toronto</p></div>
+                <div><img src="../images/community.jpg" alt="Training session"><p class="caption">Community Training Camp 2026</p></div>
+                <div><img src="../images/pride.jpg" alt="Stadium view"><p class="caption">Night Match at Home Stadium</p></div>
+                <div><img src="../images/passion.jpg" alt="Soccer ball on field"><p class="caption">Pre-game Warmups</p></div>
+            </div>
+        </div>
+
+        <aside>
+            <p>This website is a student project for Web Programming and Design.</p>
+        </aside>
+    </main>
+
+    <footer>
+        Copyright &copy; 2026 | Sport Club Toronto | Created by Anderson Melo
+    </footer>
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider Plugin JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Plugin Initialization Script -->
+    <script>
+        $(document).ready(function(){
+            $('.slider-container').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true
+            });
+        });
+    </script>
+</body>
+</html>

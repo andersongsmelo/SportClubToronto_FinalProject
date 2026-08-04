@@ -1,0 +1,340 @@
+/* Main page container styling */
+body {
+    background-color: rgb(17, 17, 17); /* Dark background theme */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Clean sans-serif font stack */
+    min-height: 150vh; /* Enforces 1.5 screen height minimum for desktop view */
+    display: flex; /* Flexbox layout to keep the footer pushed down */
+    flex-direction: column; /* Stacks child elements vertically (nav -> header -> main -> footer) */
+}
+
+/* Navigation wrapper */
+nav {
+    background-color: rgb(214, 31, 39); /* Primary red brand color */
+    padding: 20px;
+    text-align: center; /* Centers navigation links horizontally */
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none; /* Removes default underline */
+    border: 1px solid white; /* Outline button style */
+    background-color: transparent;
+    border-radius: 8px; /* Rounded button corners */
+    transition: 0.3s; /* Smooth hover transition effect */
+}
+
+/* Navigation links hover state */
+nav a:hover {
+    background-color: white; /* Inverts colors on mouse hover */
+    color: rgb(214, 31, 39);
+}
+
+/* Main hero banner section */
+#banner {
+    margin-top: 5px;
+    position: relative; /* Context for pseudo-element positioning */
+    background-image: url(../images/banner.jpg); /* Image source: https://unsplash.com/photos/soccer-field-qCrKTET_09o */
+    background-size: cover; /* Ensures image covers the entire banner area */
+    background-position: center; /* Keeps center of image visible */
+    height: 200px;
+    display: flex; /* Flexbox used to center text vertically and horizontally */
+    align-items: center;
+    justify-content: center;
+    color: gold;
+}
+
+/* Dark overlay mask over the banner image for improved text contrast */
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 40% opaque black layer */
+}
+
+/* Banner title positioning above the overlay mask */
+#banner h1 {
+    position: relative;
+    z-index: 1; /* Places title layer above the overlay ::before element */
+}
+
+/* Main content wrapper */
+main {
+    background-color: rgb(17, 17, 17);
+    padding: 20px;
+    margin-top: 10px;
+    flex: 1; /* Expands to fill available space, pushing footer to the bottom */
+}
+
+/* Standard content box container */
+.box {
+    background-color: rgb(214, 31, 39); /* Red content box background */
+    color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 2px solid darkgoldenrod; /* Gold accent border */
+}
+
+/* Flexbox containers for side-by-side section layouts */
+#three-sections, 
+#two-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between flex items */
+}
+
+/* Individual card components inside flex containers */
+.sectionBox {
+    flex: 1; /* Allows equal distribution of column widths */
+    min-width: 0; /* Prevents overflow issues from wide content/images */
+    background-color: darkgoldenrod;
+    color: rgb(17, 17, 17);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid rgb(214, 31, 39);
+}
+
+/* Responsive images inside section boxes */
+.sectionBox img {
+    max-width: 100%; /* Prevents image from overflowing parent card */
+    width: 100%;
+    height: auto; /* Maintains original aspect ratio without distortion */
+    border-radius: 8px;
+    border: 2px solid rgb(17, 17, 17);
+}
+
+/* Sidebar / Secondary content banner */
+aside {
+    background-color: rgb(214, 31, 39);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid darkgoldenrod;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Footer section */
+footer {
+    background-color: rgb(214, 31, 39);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-top: 2px solid darkgoldenrod;
+}
+
+/*
+   PAGE 2: FORM STYLES (Contact / Registration)
+*/
+
+/* Vertical layout wrapper for each form field */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form labels styling */
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input fields, dropdowns, and textareas styling */
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Submit button styling */
+#submitBtn {
+    background-color: darkgoldenrod;
+    color: rgb(17, 17, 17);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+/* Submit button hover state */
+#submitBtn:hover {
+    background-color: white;
+}
+
+/* JavaScript validation error container */
+#error-message {
+    display: none; /* Hidden by default; toggled via JS script */
+    background-color: #ffcccc;
+    color: #990000;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #990000;
+}
+
+/*
+   PAGE 3: GALLERY STYLES
+*/
+
+/* Carousel/Slideshow wrapper */
+.slider-container {
+    max-width: 700px;
+    margin: 20px auto; /* Centers carousel horizontally */
+}
+
+/* Gallery slider images */
+.slider-container img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover; /* Prevents image distortion while cropping to fit height */
+    border-radius: 8px 8px 0 0;
+}
+
+/* Image caption box */
+.caption {
+    text-align: center;
+    padding: 10px;
+    background-color: darkgoldenrod;
+    color: #111;
+    font-weight: bold;
+    border-radius: 0 0 8px 8px;
+}
+
+/*
+   PAGE 4: TABLE & CSS GRID STYLES (Stats)
+*/
+
+/* Two-column layout using CSS Grid */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 parts main content, 1 part sidebar */
+    gap: 20px;
+}
+
+/* Container enabling horizontal scrolling for tables on smaller screens */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* League table formatting */
+.stats-table {
+    width: 100%;
+    border-collapse: collapse; /* Removes default spacing between table cells */
+    margin-top: 15px;
+    background-color: white;
+    color: #111;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures table corners respect border-radius */
+}
+
+/* Padding and text alignment for table cells */
+.stats-table th, 
+.stats-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Table header row styling */
+.stats-table thead {
+    background-color: darkgoldenrod;
+    color: #111;
+}
+
+/* Row separation lines */
+.stats-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Highlighting the 1st place team row */
+.highlight-row {
+    background-color: #ffe6e6;
+    font-weight: bold;
+}
+
+/* Top scorers list formatting */
+.scorers-list {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+}
+
+.scorers-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/*
+   RESPONSIVE MEDIA QUERIES (MOBILE VIEW: 768px AND BELOW)
+*/
+
+@media (max-width: 768px) {
+
+    /* Resets fixed minimum height so mobile screens don't have excessive empty space */
+    body {
+        min-height: auto;
+    }
+
+    /* Stacks navigation links into a single vertical column */
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Expands navigation buttons to full width for easier touch tapping */
+    nav a {
+        display: block;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Converts horizontal flex boxes into single-column vertical stacks */
+    #three-sections, 
+    #two-sections {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Restricts card image sizes on smaller screens */
+    .sectionBox img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    /* Reduces hero banner height on mobile */
+    #banner {
+        height: 150px;
+    }
+
+    /* Scales down banner heading text size */
+    #banner h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* Converts CSS Grid from 2 columns to a single full-width column */
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduces gallery image height on mobile devices */
+    .slider-container img {
+        height: 220px;
+    }
+}
