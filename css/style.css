@@ -12,10 +12,11 @@ nav {
     background-color: rgb(214, 31, 39); /* Primary red brand color */
     padding: 20px;
     text-align: center; /* Centers navigation links horizontally */
+    position: relative;
 }
 
 /* Navigation links */
-nav a {
+nav a:not(:first-child) {
     color: white;
     padding: 10px 20px;
     margin: 10px;
@@ -24,12 +25,28 @@ nav a {
     background-color: transparent;
     border-radius: 8px; /* Rounded button corners */
     transition: 0.3s; /* Smooth hover transition effect */
+    display: inline-block;
 }
 
 /* Navigation links hover state */
-nav a:hover {
+nav a:not(:first-child):hover {
     background-color: white; /* Inverts colors on mouse hover */
     color: rgb(214, 31, 39);
+}
+
+.nav-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: auto;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.nav-logo:hover {
+    opacity: 0.8;
 }
 
 /* Main hero banner section */
@@ -292,14 +309,26 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        align-items: center;
+        position: static;
+        padding: 15px;
+    }
+
+    .nav-logo {
+        position: static;
+        transform: none;
+        height: 50px;
+        width: auto;
+        margin-bottom: 5px;
     }
 
     /* Expands navigation buttons to full width for easier touch tapping */
-    nav a {
+    nav a:not(:first-child) {
         display: block;
         margin: 0;
         width: 100%;
         box-sizing: border-box;
+        text-align: center;
     }
 
     /* Converts horizontal flex boxes into single-column vertical stacks */
