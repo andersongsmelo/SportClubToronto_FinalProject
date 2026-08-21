@@ -8,14 +8,15 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const errorDiv = document.getElementById('error-message');
 
     let errors = [];
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (fullName === '') {
+    if (!fullName) {
         errors.push('Full Name is required.');
     }
 
-    if (email === '') {
+    if (!email) {
         errors.push('Email is required.');
-    } else if (!email.includes('@') || !email.includes('.')) {
+    } else if (!emailRegex.test(email)) {
         errors.push('Please enter a valid email address.');
     }
 
