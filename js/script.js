@@ -20,7 +20,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         errors.push('Please enter a valid email address.');
     }
 
-    if (interest === '') {
+    if (!interest) {
         errors.push('Please select what you are interested in.');
     }
 
