@@ -18,20 +18,30 @@ nav {
 /* Navigation links */
 nav a:not(:first-child) {
     color: white;
-    padding: 10px 20px;
+    padding: 10px 0;
     margin: 10px;
+    width: 130px;
     text-decoration: none; /* Removes default underline */
     border: 1px solid white; /* Outline button style */
     background-color: transparent;
     border-radius: 8px; /* Rounded button corners */
     transition: 0.3s; /* Smooth hover transition effect */
     display: inline-block;
+    box-shadow: 0 4px 0 rgb(140, 15, 20);
+    transition: all 0.15s ease;
 }
 
 /* Navigation links hover state */
 nav a:not(:first-child):hover {
     background-color: white; /* Inverts colors on mouse hover */
     color: rgb(214, 31, 39);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 rgb(140, 15, 20);
+}
+
+nav a:not(:first-child):active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgb(140, 15, 20);
 }
 
 .nav-logo {
@@ -141,11 +151,16 @@ aside {
 
 /* Footer section */
 footer {
-    background-color: rgb(214, 31, 39);
     color: white;
     padding: 15px;
     text-align: center;
     border-top: 2px solid darkgoldenrod;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: darkgoldenrod;
 }
 
 /*
