@@ -43,6 +43,7 @@ nav a:not(:first-child):hover {
     width: auto;
     opacity: 1;
     transition: opacity 0.3s ease;
+    border-radius: 8px;
 }
 
 .nav-logo:hover {
