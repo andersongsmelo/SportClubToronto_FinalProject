@@ -444,7 +444,7 @@ footer hr {
     }
 
     /* Expands navigation buttons to full width for easier touch tapping */
-    nav a:not(nav-logo-link) {
+    nav a:not(.nav-logo-link) {
         display: block;
         margin: 0;
         width: 100%;
