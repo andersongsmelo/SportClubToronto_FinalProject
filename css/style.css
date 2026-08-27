@@ -10,13 +10,13 @@ body {
 /* Navigation wrapper */
 nav {
     background-color: rgb(214, 31, 39); /* Primary red brand color */
-    padding: 20px;
+    padding: 20px 20px 20px 90px;
     text-align: center; /* Centers navigation links horizontally */
     position: relative;
 }
 
 /* Navigation links */
-nav a:not(:first-child) {
+nav a:not(.nav-logo-link) {
     color: white;
     padding: 10px 0;
     margin: 10px;
@@ -32,14 +32,14 @@ nav a:not(:first-child) {
 }
 
 /* Navigation links hover state */
-nav a:not(:first-child):hover {
+nav a:not(.nav-logo-link):hover {
     background-color: white; /* Inverts colors on mouse hover */
     color: rgb(214, 31, 39);
     transform: translateY(-2px);
     box-shadow: 0 6px 0 rgb(140, 15, 20);
 }
 
-nav a:not(:first-child):active {
+nav a:not(.nav-logo-link):active {
     transform: translateY(2px);
     box-shadow: 0 2px 0 rgb(140, 15, 20);
 }
@@ -151,16 +151,121 @@ aside {
 
 /* Footer section */
 footer {
-    color: white;
-    padding: 15px;
-    text-align: center;
+    color: #0d0d0d;
+    background-color: rgb(214, 31, 39);
+    padding: 40px 20px 20px;
     border-top: 2px solid darkgoldenrod;
+    text-align: center;
 }
 
-hr {
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Coluna 1: Logo & Brand */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-logo {
+    height: 65px;
+    width: auto;
+    border-radius: 6px;
+    margin-left: 37px;
+}
+
+.brand-tagline {
+    font-weight: bold;
+    color: darkgoldenrod;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Colunas: Headings */
+.footer-nav-col h4, 
+.footer-contact-col h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgb(214, 31, 39);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+/* Coluna 2: Links de Navegação */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: transparent;
+    padding: 0;
+    position: static;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, transform 0.2s ease;
     border: none;
-    height: 2px;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: rgb(214, 31, 39);
+    transform: translateX(4px);
+    background: none;
+    box-shadow: none;
+}
+
+/* Coluna 3: Endereço & Contato */
+.footer-contact-col address {
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+.footer-contact-col a {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+.footer-contact-col a:hover {
+    text-decoration: underline;
+}
+
+/* Linha Divisória & Copyright */
+footer hr {
+    border: none;
+    height: 1px;
     background-color: darkgoldenrod;
+    margin: 30px 0 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: black;
+}
+
+.footer-bottom span {
+    color: darkgoldenrod;
+    font-weight: bold;
 }
 
 /*
@@ -339,7 +444,7 @@ hr {
     }
 
     /* Expands navigation buttons to full width for easier touch tapping */
-    nav a:not(:first-child) {
+    nav a:not(nav-logo-link) {
         display: block;
         margin: 0;
         width: 100%;
@@ -381,5 +486,28 @@ hr {
     /* Reduces gallery image height on mobile devices */
     .slider-container img {
         height: 220px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-left: 0;
+    }
+
+    .footer-brand {
+        align-items: center;
+    }
+
+    .footer-nav-col h4, 
+    .footer-contact-col h4 {
+        border-bottom: none;
+    }
+
+    .footer-links a:hover {
+        transform: none;
     }
 }
