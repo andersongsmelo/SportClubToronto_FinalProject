@@ -12,7 +12,7 @@
 
     <nav>
         <!--Logo-->
-        <a href="index.html">
+        <a href="index.html" class="nav-logo-link">
             <img src="images/Logo_SportClubToronto.png" alt="Sport Club Toronto Logo" class="nav-logo">
         </a>
         <!--Links-->
@@ -91,19 +91,41 @@
     </main>
 
     <footer>
-        <nav>
-            <!--Logo-->
-            <a href="index.html">
-                <img src="images/Logo_SportClubToronto.png" alt="Sport Club Toronto Logo" class="nav-logo">
-            </a>
-            <!--Links-->
-            <a href="index.html">Home</a>
-            <a href="webpages/gallery.html">Gallery</a>
-            <a href="webpages/stats.html">Stats</a>
-            <a href="webpages/contact.html">Contact Us</a>
-        </nav>
+        <div class="footer-container">
+            <!-- Coluna 1: Brand & Logo -->
+            <div class="footer-brand">
+                <img src="images/Logo_SportClubToronto.png" alt="Sport Club Toronto Logo" class="footer-logo">
+                <p class="brand-tagline">Sport Club Toronto</p>
+            </div>
+
+            <!-- Coluna 2: Navegação -->
+            <div class="footer-nav-col">
+                <h4>Quick Links</h4>
+                <nav class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="webpages/gallery.html">Gallery</a>
+                    <a href="webpages/stats.html">Stats</a>
+                    <a href="webpages/contact.html">Contact Us</a>
+                </nav>
+            </div>
+
+            <!-- Coluna 3: Contato & Endereço -->
+            <div class="footer-contact-col">
+                <h4>Address | Contact Us</h4>
+                <address>
+                    <p>1987 Sport Club Toronto Avenue</p>
+                    <p>Toronto, Ontario S1P 8O7, Canada</p>
+                    <p><strong>Phone:</strong> 123-456-1987</p>
+                    <p><strong>Email:</strong> <a href="mailto:sportclubtoronto@sct.ca">sportclubtoronto@sct.ca</a></p>
+                </address>
+            </div>
+        </div>
+
         <hr>
-        Copyright &copy; 2026 | Sport Club Toronto | Created by Anderson Melo
+
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 | Sport Club Toronto | Created by <span>Anderson Melo</span></p>
+        </div>
     </footer>
     
 </body>
